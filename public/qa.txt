@@ -1,0 +1,11 @@
+composer install 
+php artisan key:generate
+php artisan optimize
+php artisan config:cache
+
+config/database
+.env
+
+php -S localhost:8888 -t public
+
+https://www.webslesson.info/2022/08/custom-auth-login-registration-logout-in-laravel-9.html
