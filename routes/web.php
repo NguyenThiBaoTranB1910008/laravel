@@ -19,7 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', [ProgramController::class, 'index']);
+Route::get('/', [ProgramController::class, 'index']);
+Route::get('filter', [ProgramController::class, 'filter']);
+Route::post('filterdate', [ProgramController::class, 'index'])->name('filterdate');
+Route::get('getMonth', [ProgramController::class, 'getMonth'])->name('getMonth');
+
 
 Route::controller(SampleController::class)->group(function(){
 

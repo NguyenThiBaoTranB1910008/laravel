@@ -9,33 +9,55 @@
 </div>
 
 @endif
-
 <div class="row justify-content-center home">
-	<div class="col-md-4">
-		<div class="form-wrap">
-			<div class="form-title">Login</div>
-			<div class="mt-2">
-				<form action="{{ route('sample.validate_login') }}" method="post">
-					@csrf
-					<div class="form-group mb-3">
-						<input type="text" name="email" class="form-control" placeholder="Email"/>
-						@if($errors->has('email'))
-							<span class="text-danger">{{ $errors->first('email') }}</span>
-						@endif
-					</div>
-					<div class="form-group mb-3">
-						<input type="password" name="password" class="form-control" placeholder="Password" />
-						@if($errors->has('password'))
-							<span class="text-danger">{{ $errors->first('password') }}</span>
-						@endif
-					</div>
-					<div class="d-grid mx-auto">
-						<button type="subit" class="btn btn-dark btn-block form-btn">Login</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#
+		<span id ="sort"><i class="fa-solid fa-chevron-down" id = "filter_icon"></i></i></span>
+	  </th>
+      <th scope="col">First
+	  </th>
+      <th scope="col">Last
+	  	<span id ="sort_date"><i class="fa-solid fa-chevron-down" id = "filter_date"></i></i></span>
+	  </th>
+    </th>
+      <th scope="col">Last
+	  	<span id ="sort_delivery">
+        <span class="filter_delivery_icon">
+          <i class="fa-solid fa-chevron-down" id="filter_delivery_date"></i>
+        </span>
+        <div class="fhs_top_languages_dropdown fhs_dropdown" id ="filter_delivery_dropdown">
+            <select class="filter_delivery_select_year">
+              <option value = 'all'>Năm</option>
+              @foreach($year as $item)
+              <option value = '{{$item}}'>{{$item}}</option>
+              @endforeach
+            </select>
+            <select class='filter_delivery_select_month'>
+                <option value = 'all'>Tháng</option>
+                @foreach($month as $item)
+                <option value = '{{$item}}'>{{$item}}</option>
+                @endforeach
+            </select>
+        </div>
+	    	</div>
+      </span>
+	  </th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+  	@foreach($get_all_user as $item)
+	  <tr>
+      <th scope="row">{{$item -> idUser}}</th>
+      <td>{{$item -> id}}</td>
+      <td>{{$item -> date}}</td>
+      <td>{{$item -> date}}</td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
 </div>
 
 @endsection('content')

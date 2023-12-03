@@ -4,105 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Đăng ký</title>
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .menu{
-            font-weight: 700;
-            cursor: pointer;        
-            text-align: center;
-            font-size: 20px;
-            border-top: 15px solid #ccdfef;
-            position: fixed;
-            /* top: 24px; */
-            top: 0;
-            right: 0;
-            left: 0;
-            background: #fff;
-            z-index: 100;
-            box-shadow: 0 6px 10px #bbbbbb59;
-        }
-
-        .navbar-nav .nav-link{
-            color: #0060ae !important;
-            font-size:17px;
-        }
-
-        .content{
-            margin-top: 150px !important;
-        }
-
-        .header-icon{
-            border: 2px solid #0060ae;
-            width: 32px;
-            height: 32px;
-            border-radius: 100%;
-            padding: 0;
-              position: relative;
-        }
-
-        .header-icon i{
-            font-size: 20px;
-            position: absolute;
-            top: 5.5px;
-            left: 2.7px;
-        }
-
-        body{
-            background-color:#f2f2f2;
-            /* width: 100vw; */
-        }
-
-        .form-wrap{
-            width: 390px;
-            background: #fff;
-            border-radius: 10px;
-            padding: 50px 55px 33px;
-            box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-        }
-        
-        form{
-            display:flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .form-title{
-            font-family: Poppins-Bold;
-            font-size: 30px;
-            color: #333;
-            line-height: 1.2;
-            text-align: center;
-        }
-
-        input.form-control {
-            font-family: Poppins-Regular;
-            font-size: 15px;
-            color: #555;
-            line-height: 1.2;
-            display: block;
-            width: 100%;
-            height: 45px;
-            background: 0 0;
-            padding: 0 5px;
-            outline: none;
-            border: 2px solid #ccc;
-        }
-
-        input.form-control:focus{
-            transition: all 0.5s ease;
-            outline: none;
-            border: 2px solid #6a7dfe;
-        }
-
-        .form-btn{
-            background-color: #0060ae;
-            border: 0;
-            border-radius: 20px;
-            width: 120px;
-            text-align:center;
-            height: 40px
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-light navbar-expand-lg mb-5 menu">
@@ -141,4 +44,19 @@
     </div>
     
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src="{{asset('resources/js/lightslider.js')}}"></script>
+        <script src="{{asset('resources/js/lightgallery-all.min.js')}}"></script>
+        <script src="{{asset('resources/js/prettify.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script src="{{asset('resources/js/datatables.min.js')}}"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+<script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+<script type="text/javascript"  src="../jQuery/jQuery-2.1.3.min.js"></script>
 </html>
